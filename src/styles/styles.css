@@ -1,24 +1,25 @@
 html,
 body {
   margin: 0;
-  font-family: monospace;
-  font-weight: 700;
-  font-size: 18px;
+
   cursor: default;
   height: fit-content;
   overflow: hidden;
 }
-#container {
+.container {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  overflow: auto;
-  top: 0vh;
+  top: 8vh;
   left: 0;
   width: 100%;
-  height: 92vh;
-  margin-top: 8vh;
-  margin-bottom: 8vh;
+  height: 100vh;
+  padding-top: 8vh;
+
+}
+
+#baseContainer{
+    padding-top: 8vh;
+    position: relative;
 }
 .page {
   display: flex;
@@ -26,12 +27,227 @@ body {
   align-items: center;
   position: relative;
   width: 100%;
+  left:0 !important;
 
   box-sizing: border-box;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
   color: #000;
-  background-color: #e6e6e6;
-  min-height: 92vh;
-  overflow: hidden;
+  height: 100%;
+
 }
+
+.row{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+body {
+  font-family: MontserratRegular;
+  padding-top: 8vh;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+h5 {
+  font-size: 30px;
+}
+
+p {
+  font-family: Zilla Slab;
+  font-size: 24px;
+}
+
+ul {
+  font-size: 20px;
+}
+
+#text_container {
+  font-family: Zilla Slab;
+}
+
+nav {
+  font-family: Montserrat;
+  font-weight: bold;
+  height: 8vh;
+  color: #D9B559;
+}
+
+nav-item {
+  font-family: Montserrat;
+  font-weight: bold;
+  height: 8vh;
+}
+
+a {
+  color: inherit !important;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: Zilla Slab;
+  font-weight: bold;
+  src: url("../assets/ZillaSlab-Bold.ttf");
+}
+
+@font-face {
+  font-family: Zilla Slab;
+  src: url("../assets/ZillaSlab-Regular.ttf");
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: bold;
+  src: url("../assets/Montserrat-Bold.ttf");
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url("../assets/Montserrat-Light.ttf");
+}
+
+
+.simple-row {
+  height: min-content !important;
+}
+
+.no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+hr {
+  border-top: 2px solid #12447D !important;
+}
+
+.fa {
+  font-size: 20px;
+  width: 20px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  color: #D9B559;
+}
+
+/* Add a hover effect if you want */
+
+.fa:hover {
+  opacity: 0.7;
+  text-decoration: none;
+  color: #858585;
+}
+
+.navbar-brand {
+  /* Stops hamburger overflow for small width screens */
+  margin-right: 0;
+}
+
+.navbar {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar-collapse {
+  background-color: #12447D;
+  width: 100%;
+}
+
+.navbar-logo {
+  height: 30px;
+  @media (max-width: 319px) {
+      height: 25px;
+  }
+}
+
+.dropdownmenu.dropdown-toggle {
+  background-color: white !important;
+  text-align: center;
+}
+
+.navbar-collapse.collapse.show {
+  border-radius: 10px;
+}
+
+a.dropdown-item:focus {
+  background-color: white !important;
+  color: #12447D !important;
+}
+
+a.dropdown-item:hover {
+  color: #12447D !important;
+}
+
+a.nav-link:hover, a.nav-link:focus {
+  color: #858585 !important;
+}
+
+.footer {
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  height: fit-content;
+  background-color: #12447D;
+  flex-shrink: 0;
+}
+
+.text-muted {
+  color: #D9B559 !important;
+}
+
+.wrapper {
+  flex: 1 0 auto;
+}
+
+.form {
+  display: block;
+  text-align: center;
+}
+
+.imagediv {
+  text-align: center;
+  align-content: center;
+}
+
+.image {
+  height: 65vh;
+  width: auto;
+  display: block;
+}
+
+#genericPageTitle {
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .form {
+      display: none;
+  }
+  .image {
+      display: none;
+  }
+  #genericPageTitle {
+      width: 100vw;
+  }
+}
+
+.sectionheader {
+  font-family: MontserratBold;
+  font-size: calc(10px + 1vw + 1vh);
+  color: #D9B559;
+}
+
+.sectionheaderLarge {
+  font-family: MontserratBold;
+  font-size: calc(10px + 1.5vw + 1.5vh);
+  color: #D9B559;
+}
+
+.subtext {
+  color: #858585;
+  font-size: 18px;
+}
+

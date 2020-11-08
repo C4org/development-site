@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import {
   Navbar,
   Nav,
@@ -17,7 +17,7 @@ export default function StyledNavbar() {
       <Navbar.Brand href="/">
         <img
           src="/img/logo.png"
-          class="d-inline-block align-top navbar-logo"
+          className="d-inline-block align-top navbar-logo"
           alt="C4"
         ></img>
       </Navbar.Brand>
@@ -25,27 +25,67 @@ export default function StyledNavbar() {
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto">
           <NavDropdown title="About" id="collasible-nav-dropdown">
-            <NavDropdown.Item href="/about/club">Our Club</NavDropdown.Item>
-            <NavDropdown.Item href="/about/board">Our Board</NavDropdown.Item>
+            <NavDropdown.Item>
+              <AniLink cover direction="right" to="/about" bg="#12447D">
+                About
+              </AniLink>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              <AniLink cover direction="right" to="/about/board" bg="#12447D">
+                Our Board
+              </AniLink>
+            </NavDropdown.Item>
           </NavDropdown>
           <NavDropdown title="Support" id="collasible-nav-dropdown">
-            <NavDropdown.Item href="/support/">About</NavDropdown.Item>
-            <NavDropdown.Item href="/support/seminar">
-              Golden Seminar
+            <NavDropdown.Item>
+              <AniLink cover direction="right" to="/support" bg="#12447D">
+                About
+              </AniLink>
             </NavDropdown.Item>
-            <NavDropdown.Item href="/support/cc-awareness-month">
-              Childhood Awareness Month
+            <NavDropdown.Item>
+              <AniLink
+                cover
+                direction="right"
+                to="/support/seminar"
+                bg="#12447D"
+              >
+                Golden Seminar
+              </AniLink>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              <AniLink
+                cover
+                direction="right"
+                to="/support/cc-awareness-month"
+                bg="#12447D"
+              >
+                Childhood Cancer Awareness Month
+              </AniLink>
             </NavDropdown.Item>
           </NavDropdown>
           <NavDropdown title="Fundraising" id="collasible-nav-dropdown">
-            <NavDropdown.Item href="/fundraising/">About</NavDropdown.Item>
+            <NavDropdown.Item>
+              <AniLink cover direction="right" to="/fundraising" bg="#12447D">
+                About
+              </AniLink>
+            </NavDropdown.Item>
           </NavDropdown>
 
-          <Nav.Link href="/find">Chapters</Nav.Link>
-          <Nav.Link href="/contact">Events</Nav.Link>
-          <Nav.Link href="/blog">Contact</Nav.Link>
-
-
+          <Nav.Link>
+            <AniLink cover direction="right" to="/find" bg="#12447D">
+              Chapters
+            </AniLink>
+          </Nav.Link>
+          <Nav.Link>
+            <AniLink cover direction="right" to="/events" bg="#12447D">
+              Events
+            </AniLink>
+          </Nav.Link>
+          <Nav.Link>
+            <AniLink cover direction="right" to="/contact" bg="#12447D">
+              Contact
+            </AniLink>
+          </Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

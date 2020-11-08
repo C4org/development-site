@@ -2,3 +2,8 @@
     background-color: #12447D !important;
     height: 8vh;
 }
+
+.nav-link {
+    color: #D9B559 !important;
+    font-size: medium;
+}
