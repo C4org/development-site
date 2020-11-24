@@ -4,7 +4,7 @@ body {
 
   cursor: default;
   height: fit-content;
-  overflow: hidden;
+  overflow: visible;
 }
 .container {
   display: flex;
@@ -71,6 +71,7 @@ nav {
   font-weight: bold;
   height: 8vh;
   color: #D9B559;
+  max-width: 100%;
 }
 
 nav-item {
@@ -90,23 +91,23 @@ a:hover{
 @font-face {
   font-family: Zilla Slab;
   font-weight: bold;
-  src: url("../assets/ZillaSlab-Bold.ttf");
+  src: url("../../static/ZillaSlab-Bold.ttf");
 }
 
 @font-face {
   font-family: Zilla Slab;
-  src: url("../assets/ZillaSlab-Regular.ttf");
+  src: url("../../static/ZillaSlab-Regular.ttf");
 }
 
 @font-face {
   font-family: Montserrat;
   font-weight: bold;
-  src: url("../assets/Montserrat-Bold.ttf");
+  src: url("../../static/Montserrat-Bold.ttf");
 }
 
 @font-face {
   font-family: Montserrat;
-  src: url("../assets/Montserrat-Light.ttf");
+  src: url("../../static/Montserrat-Light.ttf");
 }
 
 

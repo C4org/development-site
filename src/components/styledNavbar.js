@@ -1,22 +1,14 @@
 import React from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import {
-  Navbar,
-  Nav,
-  NavDropdown,
-  FormControl,
-  Button,
-  Form,
-  Container,
-} from "react-bootstrap"
+import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap"
 import "../styles/navbar.modules.css"
 
 export default function StyledNavbar() {
   return (
-    <Navbar expand="lg" fixed="top" variant="dark" background-color="#12447D">
+    <Navbar expand="md" fixed="top" variant="dark" background-color="#12447D">
       <Navbar.Brand href="/">
         <img
-          src="/img/logo.png"
+          src="img/logo.png"
           className="d-inline-block align-top navbar-logo"
           alt="C4"
         ></img>
@@ -71,21 +63,15 @@ export default function StyledNavbar() {
             </NavDropdown.Item>
           </NavDropdown>
 
-          <Nav.Link>
-            <AniLink cover direction="right" to="/find" bg="#12447D">
-              Chapters
-            </AniLink>
-          </Nav.Link>
-          <Nav.Link>
-            <AniLink cover direction="right" to="/events" bg="#12447D">
-              Events
-            </AniLink>
-          </Nav.Link>
-          <Nav.Link>
-            <AniLink cover direction="right" to="/contact" bg="#12447D">
-              Contact
-            </AniLink>
-          </Nav.Link>
+          <AniLink cover direction="right" to="/find" bg="#12447D" className="nav-link">
+            Chapters
+          </AniLink>
+          <AniLink cover direction="right" to="/events" bg="#12447D" className="nav-link">
+            Events
+          </AniLink>
+          <AniLink cover direction="right" to="/contact" bg="#12447D" className="nav-link">
+            Contact
+          </AniLink>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

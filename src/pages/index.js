@@ -3,12 +3,8 @@ import React from "react"
 import StyledNavbar from "../components/styledNavbar"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "../styles/styles.css"
-import { Row, Col, Container } from "react-bootstrap"
+import { Row, Col, Container, Button } from "react-bootstrap"
 import ReactFullpage from "@fullpage/react-fullpage"
-import Helmet from "react-helmet"
-import { withPrefix, Link } from "gatsby"
-import CountUp from "react-countup"
-import { graphql, useStaticQuery } from "gatsby"
 import CountDiv from "../components/countDiv.js"
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
@@ -22,20 +18,12 @@ const pluginWrapper = () => {
    */
 }
 
-const originalColors = [
-  "#ff5f45",
-  "#0798ec",
-  "#fc6c7c",
-  "#435b71",
-  "orange",
-  "blue",
-  "purple",
-  "yellow",
-]
 
 class App extends React.Component {
+  
   constructor(props) {
     super(props)
+    this.handleClick = this.handleClick.bind(this);
 
     this.state = {
       fullpages: [
@@ -87,6 +75,7 @@ class App extends React.Component {
                 md="6"
                 id="instafeed"
               >
+                <Button onClick={this.handleClick}>Hi</Button>
               </Col>
             </Row>
           ),
@@ -95,6 +84,9 @@ class App extends React.Component {
     }
   }
 
+  handleClick(){
+    alert("Hello")
+  }
 
   render() {
     const { fullpages } = this.state
@@ -107,7 +99,7 @@ class App extends React.Component {
       <div className="App">
         <StyledNavbar></StyledNavbar>
         <ReactFullpage
-          debug /* Debug logging */
+          /* Debug logging */
           // Required when using extensions
           pluginWrapper={pluginWrapper}
           // fullpage options
