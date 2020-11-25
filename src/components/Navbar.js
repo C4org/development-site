@@ -1,0 +1,156 @@
+import React from "react"
+import { useState } from "react"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+
+export default function Navbar() {
+  const [isOn, setIsOn] = useState(false)
+  return (
+    <nav className="bg-CBlue fixed w-screen top-0 left-0 z-40">
+      <div className=" mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          <div className="flex flex-grow justify-between items-center">
+            <div className="flex-shrink-0">
+              <AniLink cover direction="right" to="/" bg="#12447D">
+                <img className="h-12 w-12" src="/logo.png" alt="C4" />
+              </AniLink>
+            </div>
+            <div className="hidden md:block">
+              <div className="ml-10 flex items-baseline space-x-4">
+                <AniLink
+                  cover
+                  direction="right"
+                  to="/events"
+                  bg="#12447D"
+                  className="px-3 py-2 rounded-md text-sm font-bold text-CGold hover:text-CGray"
+                >
+                  Events
+                </AniLink>
+                <AniLink
+                  cover
+                  direction="right"
+                  to="/chapters"
+                  bg="#12447D"
+                  className="px-3 py-2 rounded-md text-sm font-bold text-CGold hover:text-CGray"
+                >
+                  Chapters
+                </AniLink>
+                <AniLink
+                  cover
+                  direction="right"
+                  to="/blog"
+                  bg="#12447D"
+                  className="px-3 py-2 rounded-md text-sm font-bold text-CGold hover:text-CGray"
+                >
+                  Blog
+                </AniLink>
+                <AniLink
+                  cover
+                  direction="right"
+                  to="/contact"
+                  bg="#12447D"
+                  className="px-3 py-2 rounded-md text-sm font-bold text-CGold hover:text-CGray"
+                >
+                  Contact
+                </AniLink>
+              </div>
+            </div>
+          </div>
+          <div className="-mr-2 flex md:hidden">
+            {/* Mobile menu button */}
+            <button
+              className="bg-CBlue inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-CGold focus:outline-none"
+              onClick={() => setIsOn(!isOn)}
+            >
+              <span className="sr-only">Open main menu</span>
+              {/*
+        Heroicon name: menu
+
+        Menu open: "hidden", Menu closed: "block"
+      */}
+              <svg
+                className={`${isOn ? "hidden" : "block"} h-6 w-6`}
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+              {/*
+        Heroicon name: x
+
+        Menu open: "block", Menu closed: "hidden"
+      */}
+              <svg
+                className={`${isOn ? "block" : "hidden"} h-6 w-6`}
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      {/*
+Mobile menu, toggle classes based on menu state.
+
+Open: "block", closed: "hidden"
+    */}
+      <div className={`${isOn ? "block md:block" : "hidden md:hidden"}`}>
+        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-CBlue-700">
+          <AniLink
+            cover
+            direction="right"
+            to="/events"
+            bg="#12447D"
+            className="block px-3 py-2 rounded-md text-sm font-bold text-CGold text-center hover:text-CGray"
+          >
+            Events
+          </AniLink>
+          <AniLink
+            cover
+            direction="right"
+            to="/chapters"
+            bg="#12447D"
+            className="block px-3 py-2 rounded-md text-sm font-bold text-CGold text-center hover:text-CGray"
+          >
+            Chapters
+          </AniLink>
+          <AniLink
+            cover
+            direction="right"
+            to="/blog"
+            bg="#12447D"
+            className="block px-3 py-2 rounded-md text-sm font-bold text-CGold text-center hover:text-CGray"
+          >
+            Blog
+          </AniLink>
+          <AniLink
+            cover
+            direction="right"
+            to="/contact"
+            bg="#12447D"
+            className="block px-3 py-2 rounded-md text-sm font-bold text-CGold text-center hover:text-CGray"
+          >
+            Contact
+          </AniLink>
+        </div>
+      </div>
+    </nav>
+  )
+}
