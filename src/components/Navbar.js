@@ -6,51 +6,51 @@ export default function Navbar() {
   const [isOn, setIsOn] = useState(false)
   return (
     <nav className="bg-CBlue fixed w-screen top-0 left-0 z-40">
-      <div className=" mx-auto px-4 sm:px-6 lg:px-8">
+      <div className=" mx-auto px-6 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex flex-grow justify-between items-center">
             <div className="flex-shrink-0">
               <AniLink paintDrip to="/" hex="#d9b559">
-                <img className="h-12 w-12" src="/logo.png" alt="C4" />
+                <img className="h-12 w-12" src="./logo.png" alt="C4" />
               </AniLink>
             </div>
             <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
+              <div className="ml-10 flex items-baseline space-x-4 text-base font-sans font-bold text-CGold">
                 <AniLink
                   cover
                   direction="right"
+                  to="/support"
+                  bg="#12447D"
+                  className="px-3 py-2 rounded-md hover:text-CGray"
+                >
+                  Support
+                </AniLink>
+                <AniLink
+                  cover
+                  direction="left"
                   to="/events"
                   bg="#12447D"
-                  className="px-3 py-2 rounded-md text-sm font-bold text-CGold hover:text-CGray"
+                  className="px-3 py-2 rounded-md text-base hover:text-CGray"
                 >
                   Events
                 </AniLink>
                 <AniLink
                   cover
-                  direction="left"
+                  direction="up"
                   to="/chapters"
                   bg="#12447D"
-                  className="px-3 py-2 rounded-md text-sm font-bold text-CGold hover:text-CGray"
+                  className="px-3 py-2 rounded-md text-base hover:text-CGray"
                 >
                   Chapters
                 </AniLink>
                 <AniLink
                   cover
-                  direction="up"
+                  direction="down"
                   to="/blog"
                   bg="#12447D"
-                  className="px-3 py-2 rounded-md text-sm font-bold text-CGold hover:text-CGray"
+                  className="px-3 py-2 rounded-md text-base hover:text-CGray"
                 >
                   Blog
-                </AniLink>
-                <AniLink
-                  cover
-                  direction="down"
-                  to="/contact"
-                  bg="#12447D"
-                  className="px-3 py-2 rounded-md text-sm font-bold text-CGold hover:text-CGray"
-                >
-                  Contact
                 </AniLink>
               </div>
             </div>
@@ -112,42 +112,42 @@ Mobile menu, toggle classes based on menu state.
 Open: "block", closed: "hidden"
     */}
       <div className={`${isOn ? "block md:block" : "hidden md:hidden"}`}>
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-CBlue-700">
+        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-CBlue-700 text-base font-sans font-bold text-CGold">
           <AniLink
             cover
             direction="right"
+            to="/support"
+            bg="#12447D"
+            className="block px-3 py-2 rounded-md text-center hover:text-CGray"
+          >
+            Support
+          </AniLink>
+          <AniLink
+            cover
+            direction="left"
             to="/events"
             bg="#12447D"
-            className="block px-3 py-2 rounded-md text-sm font-bold text-CGold text-center hover:text-CGray"
+            className="block px-3 py-2 rounded-md text-center hover:text-CGray"
           >
             Events
           </AniLink>
           <AniLink
             cover
-            direction="left"
+            direction="up"
             to="/chapters"
             bg="#12447D"
-            className="block px-3 py-2 rounded-md text-sm font-bold text-CGold text-center hover:text-CGray"
+            className="block px-3 py-2 rounded-md text-center hover:text-CGray"
           >
             Chapters
           </AniLink>
           <AniLink
             cover
-            direction="up"
+            direction="down"
             to="/blog"
             bg="#12447D"
-            className="block px-3 py-2 rounded-md text-sm font-bold text-CGold text-center hover:text-CGray"
+            className="block px-3 py-2 rounded-md text-center hover:text-CGray"
           >
             Blog
-          </AniLink>
-          <AniLink
-            cover
-            direction="down"
-            to="/contact"
-            bg="#12447D"
-            className="block px-3 py-2 rounded-md text-sm font-bold text-CGold text-center hover:text-CGray"
-          >
-            Contact
           </AniLink>
         </div>
       </div>

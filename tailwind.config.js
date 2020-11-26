@@ -7,6 +7,13 @@ module.exports = {
         'CBlue': '#12447D',
         'CGray': '#858585',
         'CGold': '#d9b559',
+      },
+      fontFamily: {
+        'sans':['Montserrat', 'ui-sans-serif'],
+        'serif': ['Zilla Slab','ui-serif']
+      },
+      padding:{
+        'nav':'64px',
       }
     },
   },

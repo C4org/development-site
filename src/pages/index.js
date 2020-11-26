@@ -4,26 +4,20 @@ import Navbar from "../components/Navbar"
 import "../styles/styles.css"
 import CountDiv from "../components/countDiv.js"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import Typewriter from "typewriter-effect"
+import Typist from "react-typist"
 
 
 
 export default function App() {
   
   return (
-    <div className="container main-container pt-0 mx-auto">
+    <div className="container main-container pt-0 mx-auto font-serif">
       <Navbar></Navbar>
       <div className="page first-page cover">
-        <div className="align-self-center align-middle w-64">
-          <Typewriter
-            options={{
-              cursor:""
-            }}
-            onInit={(typewriter) => {
-              typewriter.typeString('Combating Childhood Cancer Club')
-              .start()
-            }}
-          />
+        <div className="align-self-center align-middle w-128">
+          <Typist className="text-xl font-serif" cursor={{show:false}}>
+            Combatting Childhood Cancer Club
+          </Typist>
         </div>
       </div>
       <div className="page">

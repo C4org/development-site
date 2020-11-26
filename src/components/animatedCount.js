@@ -13,7 +13,7 @@ export default function AnimatedCount(props) {
     // Update the document title using the browser API
     document.addEventListener("sal:in", ({ detail }) => {
       console.log("exiting", detail.target)
-      setTimeout(() => {start()},800)
+      setTimeout(() => {start()},800+400)
     })
   })
   return <p>{props.prefix}{countUp}{" "}{props.unit}</p>

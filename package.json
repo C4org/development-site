@@ -37,6 +37,7 @@
     "react-countup": "^4.3.3",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
+    "react-typist": "^2.0.5",
     "react-typography": "^0.16.19",
     "scroll-snap": "^3.1.0",
     "tailwindcss": "^2.0.1",
