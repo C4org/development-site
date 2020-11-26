@@ -63,12 +63,14 @@ nav-item {
 
 body {
   font-family: MontserratRegular;
-  padding-top: 64px;
   display: flex;
   flex-direction: column;
   height: 100%;
 }
+.main-container{
+  padding-top: 64px;
 
+}
 h5 {
   font-size: 30px;
 }

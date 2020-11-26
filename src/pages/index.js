@@ -4,47 +4,47 @@ import Navbar from "../components/Navbar"
 import "../styles/styles.css"
 import CountDiv from "../components/countDiv.js"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import Typewriter from "typewriter-effect"
+
+
 
 export default function App() {
+  
   return (
-    <div className="container pt-0 mx-auto">
+    <div className="container main-container pt-0 mx-auto">
       <Navbar></Navbar>
       <div className="page first-page cover">
-        <div className="align-self-center alsign-middle">
-          <p>
-            Combating Childhood Cancer Club
-            <br></br> est. September 2018
-          </p>
-        </div>
-        <div className="justify-content-center">
-          <CountDiv></CountDiv>
+        <div className="align-self-center align-middle w-64">
+          <Typewriter
+            options={{
+              cursor:""
+            }}
+            onInit={(typewriter) => {
+              typewriter.typeString('Combating Childhood Cancer Club')
+              .start()
+            }}
+          />
         </div>
       </div>
       <div className="page">
-        <div >
-          <p className="align-self-center">
-            Our mission is to support young cancer patients and boost their
-            morale through their battle against cancer.
-          </p>
-        </div>
-        <div
-          data-sal="slide-left"
-          data-sal-delay="300"
-          data-sal-duration="800"
-        >
-          <p> Image placeholder</p>
-          <AniLink cover direction="right" to="/about/club" bg="#12447D">
-            Learn more about C4 here
-          </AniLink>
-        </div>
+        <CountDiv>
+        </CountDiv>
       </div>
 
       <div className="page">
-        <div >
-          <p className="align-self-center">Instagram</p>
-        </div>
-        <div id="instafeed">
-        </div>
+        About the Club
+      </div>
+      <div className="page">
+        Values and Goals
+      </div>
+      <div className="page">
+        Orgs we support
+      </div>
+      <div className="page">
+        History
+      </div>
+      <div className="page">
+        Team
       </div>
     </div>
   )

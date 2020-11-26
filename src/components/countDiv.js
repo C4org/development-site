@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import CountUp from "react-countup"
+import AnimatedCount from "./animatedCount"
 
 export default function CountDiv() {
   const delay = 1
@@ -17,32 +17,35 @@ export default function CountDiv() {
     }
   `)
   return (
-    <div className="flex flex-col align-self-center align-middle">
-      <div className="flex flex-row" id="countUp1">
-        <p>
-          <CountUp
-            end={data.site.siteMetadata.numberOfChapters}
-            duration={3}
-            delay={delay}
-          />
-          {" "}Chapters
-        </p>
-      </div>
-      <div className="flex flex-row" id="countUp2">
-        <p>
-          <CountUp end={data.site.siteMetadata.numberOfMembers} duration={3} delay={delay} /> Members
-        </p>
-      </div>
-      <div className="flex flex-row" id="countUp3">
-        <p>
-          <CountUp end={data.site.siteMetadata.numberOfYears} duration={3} delay={delay} /> Years
-        </p>
-      </div>
-      <div className="flex flex-row" id="countUp4">
-        <p>
-          <CountUp end={data.site.siteMetadata.numberOfDollars} delay={delay} prefix="$" /> Raised
-        </p>
-      </div>
+    <div data-sal="slide-left" data-sal-delay="300" data-sal-duration="800" className="flex flex-col align-self-center align-middle">
+      <AnimatedCount
+        countEnd={data.site.siteMetadata.numberOfChapters}
+        countDuration={3}
+        countDelay={delay}
+        prefix={""}
+        unit={"Chapters"}
+      />
+      <AnimatedCount
+        countEnd={data.site.siteMetadata.numberOfMembers}
+        countDuration={3}
+        countDelay={delay}
+        prefix={""}
+        unit={"Members"}
+      />
+      <AnimatedCount
+        countEnd={data.site.siteMetadata.numberOfYears}
+        countDuration={3}
+        countDelay={delay}
+        prefix={""}
+        unit={"Years"}
+      />
+      <AnimatedCount
+        countEnd={data.site.siteMetadata.numberOfDollars}
+        countDuration={3}
+        countDelay={delay}
+        prefix={"$"}
+        unit={"Raised"}
+      />
     </div>
   )
 }

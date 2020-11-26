@@ -10,7 +10,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex flex-grow justify-between items-center">
             <div className="flex-shrink-0">
-              <AniLink cover direction="right" to="/" bg="#12447D">
+              <AniLink paintDrip to="/" hex="#d9b559">
                 <img className="h-12 w-12" src="/logo.png" alt="C4" />
               </AniLink>
             </div>
@@ -27,7 +27,7 @@ export default function Navbar() {
                 </AniLink>
                 <AniLink
                   cover
-                  direction="right"
+                  direction="left"
                   to="/chapters"
                   bg="#12447D"
                   className="px-3 py-2 rounded-md text-sm font-bold text-CGold hover:text-CGray"
@@ -36,7 +36,7 @@ export default function Navbar() {
                 </AniLink>
                 <AniLink
                   cover
-                  direction="right"
+                  direction="up"
                   to="/blog"
                   bg="#12447D"
                   className="px-3 py-2 rounded-md text-sm font-bold text-CGold hover:text-CGray"
@@ -45,7 +45,7 @@ export default function Navbar() {
                 </AniLink>
                 <AniLink
                   cover
-                  direction="right"
+                  direction="down"
                   to="/contact"
                   bg="#12447D"
                   className="px-3 py-2 rounded-md text-sm font-bold text-CGold hover:text-CGray"
@@ -124,7 +124,7 @@ Open: "block", closed: "hidden"
           </AniLink>
           <AniLink
             cover
-            direction="right"
+            direction="left"
             to="/chapters"
             bg="#12447D"
             className="block px-3 py-2 rounded-md text-sm font-bold text-CGold text-center hover:text-CGray"
@@ -133,7 +133,7 @@ Open: "block", closed: "hidden"
           </AniLink>
           <AniLink
             cover
-            direction="right"
+            direction="up"
             to="/blog"
             bg="#12447D"
             className="block px-3 py-2 rounded-md text-sm font-bold text-CGold text-center hover:text-CGray"
@@ -142,7 +142,7 @@ Open: "block", closed: "hidden"
           </AniLink>
           <AniLink
             cover
-            direction="right"
+            direction="down"
             to="/contact"
             bg="#12447D"
             className="block px-3 py-2 rounded-md text-sm font-bold text-CGold text-center hover:text-CGray"
