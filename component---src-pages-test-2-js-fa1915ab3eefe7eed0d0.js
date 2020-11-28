@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{mzSG:function(n,e,t){"use strict";t.r(e),t.d(e,"default",(function(){return a}));var r=t("q1tI"),c=t.n(r),i=t("kOA+"),o=t.n(i);function a(){return c.a.createElement("div",null,c.a.createElement(o.a,{cover:!0,direction:"right",to:"/",bg:"#12447D"},"Click me 1"))}}}]);
-//# sourceMappingURL=component---src-pages-test-2-js-fa1915ab3eefe7eed0d0.js.map
