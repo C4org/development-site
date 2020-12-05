@@ -16,7 +16,7 @@ export default function App() {
       <div className="page first-page cover">
         <div className="align-self-center align-middle w-128">
           <Typist className="text-xl font-serif" cursor={{show:false}}>
-            Combatting Childhood Cancer Club
+            Combating Childhood Cancer Club
           </Typist>
         </div>
       </div>

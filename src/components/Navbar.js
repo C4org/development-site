@@ -1,17 +1,18 @@
 import React from "react"
 import { useState } from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import logo from "../assets/logo.png" 
 
 export default function Navbar() {
   const [isOn, setIsOn] = useState(false)
   return (
     <nav className="bg-CBlue fixed w-screen top-0 left-0 z-40">
-      <div className=" mx-auto px-6 sm:px-6 lg:px-8">
+      <div className="max-w-full mx-auto px-6 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex flex-grow justify-between items-center">
             <div className="flex-shrink-0">
               <AniLink paintDrip to="/" hex="#d9b559">
-                <img className="h-12 w-12" src="./logo.png" alt="C4" />
+                <img className="h-12 w-12" src={logo} alt="C4" />
               </AniLink>
             </div>
             <div className="hidden md:block">

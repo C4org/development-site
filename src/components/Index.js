@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
+import BlogCard from "./BlogCard"
 
 export default function Index() {
   const pageQuery = useStaticQuery(graphql`
@@ -22,17 +23,10 @@ export default function Index() {
   `)
   const { edges: posts } = pageQuery.allMdx
   return (
-    <div>
-      <ul>
+    <div className="flex flex-col pt-nav">
         {posts.map(({ node: post }) => (
-          <li key={post.id}>
-            <Link to={post.fields.slug}>
-              <h2>{post.frontmatter.title}</h2>
-            </Link>
-            <p>{post.excerpt}</p>
-          </li>
+          <BlogCard postId={post.id} postSlug={post.fields.slug} postTitle={post.frontmatter.title} postExcerpt={post.excerpt} author={"Kandasamy Chokkalingam"} category={"Testing"}/>
         ))}
-      </ul>
     </div>
   )
 }

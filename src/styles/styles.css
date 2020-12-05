@@ -29,23 +29,23 @@ body{
 @font-face {
   font-family: Zilla Slab;
   font-weight: bold;
-  src: url("../../static/ZillaSlab-Bold.ttf");
+  src: url("../assets/ZillaSlab-Bold.ttf");
 }
 
 @font-face {
   font-family: Zilla Slab;
-  src: url("../../static/ZillaSlab-Regular.ttf");
+  src: url("../assets/ZillaSlab-Regular.ttf");
 }
 
 @font-face {
   font-family: Montserrat;
   font-weight: bold;
-  src: url("../../static/Montserrat-Medium.ttf");
+  src: url("../assets/Montserrat-Medium.ttf");
 }
 
 @font-face {
   font-family: Montserrat;
-  src: url("../../static/Montserrat-Light.ttf");
+  src: url("../assets/Montserrat-Light.ttf");
 }
 
 nav-item {
@@ -62,7 +62,8 @@ body {
 }
 .main-container{
   padding-top: 64px;
-
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 h5 {
   font-size: 30px;
