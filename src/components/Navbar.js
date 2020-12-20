@@ -6,8 +6,8 @@ import logo from "../assets/logo.png"
 export default function Navbar() {
   const [isOn, setIsOn] = useState(false)
   return (
-    <nav className="bg-CBlue fixed w-screen top-0 left-0 z-40">
-      <div className="max-w-full mx-auto px-6 sm:px-6 lg:px-8">
+    <nav className="max-w-100 bg-CBlue fixed w-screen top-0 left-0 z-40">
+      <div className="max-w-100 mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex flex-grow justify-between items-center">
             <div className="flex-shrink-0">
@@ -16,7 +16,7 @@ export default function Navbar() {
               </AniLink>
             </div>
             <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4 text-base font-sans font-bold text-CGold">
+              <div className="ml-10 flex items-baseline space-x-4 text-lg font-display font-medium text-CGold">
                 <AniLink
                   cover
                   direction="right"
@@ -31,7 +31,7 @@ export default function Navbar() {
                   direction="left"
                   to="/events"
                   bg="#12447D"
-                  className="px-3 py-2 rounded-md text-base hover:text-CGray"
+                  className="px-3 py-2 rounded-md hover:text-CGray"
                 >
                   Events
                 </AniLink>
@@ -40,7 +40,7 @@ export default function Navbar() {
                   direction="up"
                   to="/chapters"
                   bg="#12447D"
-                  className="px-3 py-2 rounded-md text-base hover:text-CGray"
+                  className="px-3 py-2 rounded-md hover:text-CGray"
                 >
                   Chapters
                 </AniLink>
@@ -49,7 +49,7 @@ export default function Navbar() {
                   direction="down"
                   to="/blog"
                   bg="#12447D"
-                  className="px-3 py-2 rounded-md text-base hover:text-CGray"
+                  className="px-3 py-2 rounded-md hover:text-CGray"
                 >
                   Blog
                 </AniLink>

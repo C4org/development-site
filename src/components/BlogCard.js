@@ -5,11 +5,11 @@ import { Link } from "gatsby"
 
 export default function BlogCard(props) {
   return (
-    <div className="container rounded-2xl shadow-xl my-3 mx-auto p-4 transition transform hover:-translate-y-1 hover:scale-110 ..." key={props.postId}>
+    <div className="container rounded-2xl shadow-2xl my-3 mx-auto p-4 bg-CBlue transition transform hover:-translate-y-2" key={props.postId}>
       <Link to={props.postSlug}>
-        <p className="text-base">By {props.author} in {props.category}</p>
-        <h2 className="font-sans text-xl">{props.postTitle}</h2>
-        <p>{props.postExcerpt}</p>
+        <p className="text-base text-CGold">By {props.author} in {props.category}</p>
+        <h2 className="font-display font-medium text-xl text-CGold">{props.postTitle}</h2>
+        <p className="text-base text-CGold">{props.postExcerpt}</p>
       </Link>
       
     </div>

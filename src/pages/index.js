@@ -11,11 +11,11 @@ import Typist from "react-typist"
 export default function App() {
   
   return (
-    <div className="container main-container pt-0 mx-auto font-serif">
+    <div className="container main-container pt-0 mx-auto font-serif debug-screens">
       <Navbar></Navbar>
       <div className="page first-page cover">
         <div className="align-self-center align-middle w-128">
-          <Typist className="text-xl font-serif" cursor={{show:false}}>
+          <Typist className="text-3xl font-display" cursor={{show:false}}>
             Combating Childhood Cancer Club
           </Typist>
         </div>

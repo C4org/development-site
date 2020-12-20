@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from "react"
-import Navbar from "../components/Navbar"
-import "../styles/styles.css"
+import Navbar from "../../components/Navbar"
+import "../../styles/styles.css"
 
 export default function App() {
   return (

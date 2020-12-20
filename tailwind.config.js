@@ -10,15 +10,27 @@ module.exports = {
       },
       fontFamily: {
         'sans':['Montserrat', 'ui-sans-serif'],
-        'serif': ['Zilla Slab','ui-serif']
+        'serif': ['Zilla Slab','ui-serif'],
+        'display': ['Barlow','Montserrat','ui-sans-serif']
+
       },
       padding:{
         'nav':'64px',
       }
     },
+    container: {
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2rem',
+        lg: '4rem',
+        xl: '5rem',
+        '2xl': '6rem',
+      },
+    },
   },
   variants: {
     extend: {},
   },
-  plugins: [require('tailwindcss-scroll-snap')],
+  plugins: [require('tailwindcss-scroll-snap'),
+  require("tailwindcss-debug-screens")],
 }
