@@ -6,7 +6,7 @@ import logo from "../assets/logo.png"
 export default function Navbar() {
   const [isOn, setIsOn] = useState(false)
   return (
-    <nav className="max-w-100 bg-CBlue fixed w-screen top-0 left-0 z-40">
+    <nav className="max-w-full bg-CBlue fixed w-screen top-0 left-0 z-40">
       <div className="max-w-100 mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex flex-grow justify-between items-center">

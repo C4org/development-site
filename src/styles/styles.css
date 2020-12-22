@@ -12,6 +12,12 @@ body{
 }
 .page {
   display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 767px){
+  .page{
+    display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -23,7 +29,7 @@ body{
   border-bottom: 1px solid #000;
   color: #000;
   height: calc(100vh - 64px);
-
+  }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;1,400;1,500&display=swap');

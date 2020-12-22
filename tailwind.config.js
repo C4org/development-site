@@ -27,6 +27,10 @@ module.exports = {
         '2xl': '6rem',
       },
     },
+    minWidth:{
+      '2/6': '33.333333%',
+      '4/6': '66.666667%'
+    }
   },
   variants: {
     extend: {},
