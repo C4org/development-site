@@ -1,87 +1,96 @@
 @tailwind base;
-
 @tailwind components;
-
 @tailwind utilities;
 
-.tl-edges{
-  overflow: visible;
-}
-body{
-  overflow-y: auto;
-}
-.page {
-  display: flex;
-  flex-direction: column;
+.tl-edges {
+    overflow: visible;
 }
 
-@media (min-width: 767px){
-  .page{
+body {
+    overflow-y: auto;
+    font-family: MontserratRegular;
     display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  left:0 !important;
+    flex-direction: column;
+    height: 100%;
+}
 
-  box-sizing: border-box;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-  color: #000;
-  height: calc(100vh - 64px);
-  }
+.main-container {
+    padding-top: 64px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 64px;
+}
+
+h5 {
+    font-size: 30px;
+}
+
+p {
+    font-family: Zilla Slab;
+    font-size: 24px;
+}
+
+ul {
+    font-size: 20px;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+}
+
+.longpage {
+    flex-direction: column;
+}
+
+nav-item {
+    font-family: Montserrat;
+    font-weight: bold;
+    height: 8vh;
+}
+
+@media (min-width: 768px) {
+    .page {
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        left: 0 !important;
+        box-sizing: border-box;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+        color: #000;
+        height: calc(100vh - (64px*1));
+    }
+    .longpage {
+        align-items: center;
+        box-sizing: border-box;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+        color: #000;
+    }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 
 @font-face {
-  font-family: Zilla Slab;
-  font-weight: bold;
-  src: url("../assets/ZillaSlab-Bold.ttf");
+    font-family: Zilla Slab;
+    font-weight: bold;
+    src: url("../assets/ZillaSlab-Bold.ttf");
 }
 
 @font-face {
-  font-family: Zilla Slab;
-  src: url("../assets/ZillaSlab-Regular.ttf");
+    font-family: Zilla Slab;
+    src: url("../assets/ZillaSlab-Regular.ttf");
 }
 
 @font-face {
-  font-family: Montserrat;
-  font-weight: bold;
-  src: url("../assets/Montserrat-Medium.ttf");
+    font-family: Montserrat;
+    font-weight: bold;
+    src: url("../assets/Montserrat-Medium.ttf");
 }
 
 @font-face {
-  font-family: Montserrat;
-  src: url("../assets/Montserrat-Light.ttf");
-}
-
-nav-item {
-  font-family: Montserrat;
-  font-weight: bold;
-  height: 8vh;
-}
-
-body {
-  font-family: MontserratRegular;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-.main-container{
-  padding-top: 64px;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-h5 {
-  font-size: 30px;
-}
-
-p {
-  font-family: Zilla Slab;
-  font-size: 24px;
-}
-
-ul {
-  font-size: 20px;
+    font-family: Montserrat;
+    src: url("../assets/Montserrat-Light.ttf");
 }

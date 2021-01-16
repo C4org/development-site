@@ -2,8 +2,6 @@
 import React from "react"
 import Navbar from "../components/Navbar"
 import "../styles/styles.css"
-import CountDiv from "../components/countDiv.js"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Index from "../components/Index"
 
 export default function App() {

@@ -15,6 +15,10 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-brands-svg-icons": "^5.15.2",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "@fullpage/react-fullpage": "^0.1.18",
     "@mdx-js/mdx": "^1.6.19",
     "@mdx-js/react": "^1.6.19",

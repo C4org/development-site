@@ -1,13 +1,14 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from "react"
 import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
 import "../styles/styles.css"
 
 export default function App() {
   return (
-    <div className="container main-container mx-auto font-serif debug-screens">
+    <div className="container main-container h-screen mx-auto font-serif debug-screens">
       <Navbar></Navbar>
-      <div className="width-100 page flex flex-col md:flex-row">
+      <div className="flex flex-col min-h-full longpage pb-nav md:flex-row">
         <div className='md:ml-5 md:mr-16 mt-8 mb-16 md:w-2/6 min-w-2/6 flex-shrink-0'>
           <div className='font-display text-2xl text-CGold bg-CBlue py-2 mx-auto rounded-lg text-center'>
             <p className='font-display px-2'>Organizations We Support</p>
@@ -41,6 +42,7 @@ export default function App() {
             </ul>
           </div>
         </div>
+        <Footer></Footer>
       </div>
     </div>
   )

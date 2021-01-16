@@ -2,13 +2,14 @@
 import React from "react"
 import Navbar from "../components/Navbar"
 import "../styles/styles.css"
-import CountDiv from "../components/countDiv.js"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 export default function App() {
   return (
-    <div className="container pt-0 mx-auto">
+    <div className="container main-container mx-auto font-serif debug-screens">
       <Navbar></Navbar>
+      <div className="width-100 page flex flex-col md:flex-row">
+        
+      </div>
     </div>
   )
 }

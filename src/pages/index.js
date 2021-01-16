@@ -3,8 +3,8 @@ import React from "react"
 import Navbar from "../components/Navbar"
 import "../styles/styles.css"
 import CountDiv from "../components/countDiv.js"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Typist from "react-typist"
+import Footer from "../components/Footer"
 
 
 
@@ -40,6 +40,7 @@ export default function App() {
       <div className="page">
         Team
       </div>
+      <Footer></Footer>
     </div>
   )
 }
