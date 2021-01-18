@@ -11,7 +11,7 @@ import Footer from "../components/Footer"
 export default function App() {
   
   return (
-    <div className="container main-container max-w-full pt-0 mx-auto font-serif debug-screens">
+    <div className="container main-container max-w-full min-h-full pt-0 mx-auto font-serif debug-screens">
       <Navbar></Navbar>
       <div className="page first-page cover">
         <div className="align-self-center align-middle w-128">

@@ -16,6 +16,9 @@ module.exports = {
       },
       padding:{
         'nav':'64px',
+      },
+      height:{
+        'nav':'64px',
       }
     },
     container: {

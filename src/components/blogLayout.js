@@ -5,15 +5,17 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import Navbar from './Navbar'
 import Title from './blogtitle'
 import { Link } from "gatsby"
+import "../styles/styles.css"
+import style from "../styles/blogs.module.css"
 
 const shortcodes = { Link } // Provide common components here
 
 export default function PageTemplate({ data: { mdx } }) {
   return (
-    <div className="w-screen" style={{ padding: 0 }}>
+    <div className="max-w-screen" style={{ padding: 0 }}>
       <Navbar></Navbar>
       <div className="container pt-nav mx-auto">
-        <Title>{mdx.frontmatter.title}</Title>
+        <Title title={mdx.frontmatter.title}></Title>
         <MDXProvider components={shortcodes}>
           <div className="container" style={{ position: "inherit" }}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
@@ -31,6 +33,8 @@ export const pageQuery = graphql`
       body
       frontmatter {
         title
+        author
+        date
       }
     }
   }

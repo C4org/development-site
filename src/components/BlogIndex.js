@@ -12,6 +12,9 @@ export default function Index() {
             excerpt
             frontmatter {
               title
+              date
+              author
+              category
             }
             fields {
               slug
@@ -23,9 +26,9 @@ export default function Index() {
   `)
   const { edges: posts } = pageQuery.allMdx
   return (
-    <div className="flex flex-col pt-nav">
+    <div className="flex flex-col-reverse pt-10">
         {posts.map(({ node: post }) => (
-          <BlogCard postId={post.id} postSlug={post.fields.slug} postTitle={post.frontmatter.title} postExcerpt={post.excerpt} author={"Kandasamy Chokkalingam"} category={"Testing"}/>
+          <BlogCard postId={post.id} postSlug={post.fields.slug} postTitle={post.frontmatter.title} postDate={post.frontmatter.date} excerpt={post.excerpt} author={post.frontmatter.author} category={post.frontmatter.category}/>
         ))}
     </div>
   )
