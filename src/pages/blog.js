@@ -4,10 +4,12 @@ import Navbar from "../components/Navbar"
 import "../styles/styles.css"
 import Index from "../components/BlogIndex"
 import Footer from "../components/Footer"
+import SEO from "../components/seo"
 
 export default function App() {
   return (
     <div className="container main-container min-h-screen mx-auto font-serif debug-screens">
+      <SEO title="The Blog"></SEO>
       <Navbar></Navbar>
       <div className="flex flex-col min-h-full longpage">
         <div className="mx-auto text-4xl font-display text-bold text-center pt-6 pb-2">

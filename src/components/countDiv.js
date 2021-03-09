@@ -17,7 +17,7 @@ export default function CountDiv() {
     }
   `)
   return (
-    <div data-sal="slide-left" data-sal-delay="300" data-sal-duration="800" className="flex flex-col align-self-center align-middle">
+    <div data-sal="slide-left" data-sal-delay="300" data-sal-duration="800" className="flex flex-col align-self-center w-1/4 align-middle pl-12 my-auto">
       <AnimatedCount
         countEnd={data.site.siteMetadata.numberOfChapters}
         countDuration={3}

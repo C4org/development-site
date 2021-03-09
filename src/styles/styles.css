@@ -36,7 +36,6 @@ ul {
 
 .page {
     display: flex;
-    justify-content: center;
     align-items: center;
     position: relative;
     width: 100%;
@@ -60,7 +59,6 @@ nav-item {
 
 @media (min-width: 768px) {
     .page {
-        justify-content: center;
         align-items: center;
         position: relative;
         width: 100%;

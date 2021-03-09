@@ -13,7 +13,7 @@ export default function BlogCard(props) {
         <p className="text-base font-display font-medium text-CGold">{props.postDate}</p>
         </div>
         <div className="hidden md:flex md:flex-col md:text-CGold md:font-medium">
-          <p className="my-auto text-sm w-96 font-display ">
+          <p className="my-auto text-sm text-center w-96 font-display ">
             {props.excerpt}
           </p>
         </div>

@@ -12,9 +12,8 @@ export default function AnimatedCount(props) {
   useEffect(() => {
     // Update the document title using the browser API
     document.addEventListener("sal:in", ({ detail }) => {
-      console.log("exiting", detail.target)
       setTimeout(() => {start()},800+400)
     })
   })
-  return <p>{props.prefix}{countUp}{" "}{props.unit}</p>
+  return <p className="text-2xl md:text-3xl font-display"><span className="text-CGold font-bold">{props.prefix}{countUp}</span>{" "}{props.unit}</p>
 }

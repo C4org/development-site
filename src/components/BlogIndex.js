@@ -5,7 +5,7 @@ import BlogCard from "./BlogCard"
 export default function Index() {
   const pageQuery = useStaticQuery(graphql`
     query blogIndex {
-      allMdx {
+      allMdx(filter: {fields: {type: {eq: "posts"}}}) {
         edges {
           node {
             id

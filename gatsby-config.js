@@ -10,6 +10,12 @@ module.exports = {
     numberOfMembers: 167,
     numberOfYears:2,
     numberOfDollars: 960,
+    title: "C4 Organization",
+    titleTemplate: "%s  · C4",
+    description: "C4 is a high school organization whose mission is to help pediatric cancer patients. We find and provide opportunities for everyone to show their support and help.",
+    url: "https://c4org.github.io",
+    image: "/development-site/logo.png",
+
   },
   pathPrefix: "/development-site",
   plugins: [
@@ -42,12 +48,20 @@ module.exports = {
     },
   },
   {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: `events`,
+      path: `${__dirname}/events/`,
+    },
+  },
+  {
     resolve: `gatsby-plugin-mdx`,
     options: {
     },
   },
   `gatsby-plugin-postcss`,
   `gatsby-plugin-smoothscroll`,
+  `gatsby-plugin-react-helmet`,
     
   ],
 }
